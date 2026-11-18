@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0e1110;
+  --color-surface: #171c19;
+  --color-surface-2: #212822;
+  --color-fg: #e7e2d6;
+  --color-muted: #a8ad9f;
+  --color-faint: #7c8276;
+  --color-line: #2e3630;
+  --color-brass: #d6a24a;
+  --color-brass-ink: #1a1408;
+  --color-sage: #9cb88a;
+  --color-sage-dim: #1a261c;
+  --color-rust: #e08a72;
+  --color-rust-dim: #2c1a16;
+  --font-sans: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    box-shadow: inset 0 3px 0 var(--color-brass);
+  }
+
+  ::selection {
+    background: var(--color-brass);
+    color: var(--color-brass-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brass);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes lamp {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.lamp-live {
+  animation: lamp 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

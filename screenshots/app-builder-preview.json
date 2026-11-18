@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "KEEL — Fleet Desk",
+      "hasCanvas": false,
+      "bodyTextLen": 1216,
+      "bodyTextHash": "788defc24c5e08d768f31322106e02395be9e57fd134a811500744da7ad10265",
+      "bodyTextPrefix": "KEEL LIVE MARKETS Scanner, rug check, sizer, executor. Logger an",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "KEEL — Fleet Desk",
+      "hasCanvas": false,
+      "bodyTextLen": 2266,
+      "bodyTextHash": "a743d910856e5904a1c2f21a8bd1a4300bd94d69257b53d22bf37252ff307e84",
+      "bodyTextPrefix": "KEEL LIVE MARKETS Scanner, rug check, sizer, executor. Logger an",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

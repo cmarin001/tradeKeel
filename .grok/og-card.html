@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>KEEL</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: #0e1110;
+      }
+      .card {
+        position: relative;
+        width: 1200px;
+        height: 630px;
+        background:
+          radial-gradient(ellipse 70% 55% at 50% 42%, rgba(214, 162, 74, 0.16), transparent 62%),
+          radial-gradient(ellipse 120% 80% at 50% 110%, #1a261c 0%, #0e1110 58%);
+      }
+      .grain {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.18;
+        mix-blend-mode: overlay;
+      }
+      .frame {
+        position: absolute;
+        inset: 28px;
+        border: 1px solid rgba(214, 162, 74, 0.38);
+        pointer-events: none;
+      }
+      .frame::after {
+        content: "";
+        position: absolute;
+        inset: 6px;
+        border: 1px solid rgba(231, 226, 214, 0.12);
+      }
+      .horizon {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 392px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(231, 226, 214, 0.15) 12%,
+          rgba(231, 226, 214, 0.7) 50%,
+          rgba(231, 226, 214, 0.15) 88%,
+          transparent 100%
+        );
+      }
+      .lockup {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 18px;
+      }
+      h1 {
+        margin: 0;
+        font-family: "Liberation Serif", "Times New Roman", serif;
+        font-weight: 700;
+        font-size: 176px;
+        line-height: 0.82;
+        letter-spacing: 0.16em;
+        padding-left: 0.16em;
+        color: #d6a24a;
+        text-shadow:
+          0 1px 0 #3a2c12,
+          0 14px 36px rgba(0, 0, 0, 0.45);
+      }
+      .rule {
+        width: 168px;
+        height: 2px;
+        margin-top: 28px;
+        background: #d07258;
+      }
+      .keel {
+        margin-top: 26px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <svg class="grain" width="1200" height="630" aria-hidden="true">
+        <filter id="n">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" />
+        </filter>
+        <rect width="1200" height="630" filter="url(#n)" />
+      </svg>
+      <div class="frame"></div>
+      <div class="horizon"></div>
+      <svg class="keel-water" width="1200" height="630" style="position:absolute;inset:0" aria-hidden="true">
+        <g fill="none" stroke="#8eae80" stroke-width="2.4" stroke-linecap="round" opacity="0.95">
+          <path d="M138 418 q14 22 0 42" />
+          <path d="M168 428 q12 18 0 34" />
+          <path d="M198 436 q10 14 0 26" />
+          <path d="M1002 414 q16 24 0 46" />
+          <path d="M1036 428 q12 18 0 34" />
+          <path d="M972 440 q11 16 0 28" />
+        </g>
+      </svg>
+      <div class="lockup">
+        <h1>KEEL</h1>
+        <div class="rule"></div>
+        <svg class="keel" width="460" height="118" viewBox="0 0 460 118" aria-hidden="true">
+          <path d="M36 28 H424" stroke="#e7e2d6" stroke-width="1.5" fill="none" opacity="0.9" />
+          <path
+            d="M92 28 C140 28 168 46 230 46 C292 46 320 28 368 28"
+            fill="none"
+            stroke="#d6a24a"
+            stroke-width="3.2"
+            stroke-linejoin="round"
+          />
+          <path d="M210 46 L230 96 L250 46 Z" fill="#d6a24a" />
+          <ellipse cx="230" cy="100" rx="58" ry="15" fill="#d6a24a" />
+          <ellipse cx="230" cy="100" rx="18" ry="5.2" fill="#d07258" />
+          <circle cx="118" cy="28" r="2.4" fill="#d6a24a" />
+          <circle cx="342" cy="28" r="2.4" fill="#d6a24a" />
+          <circle cx="230" cy="28" r="3" fill="#d07258" />
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
